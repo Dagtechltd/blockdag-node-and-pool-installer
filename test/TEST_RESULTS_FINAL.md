@@ -1,4 +1,4 @@
-# Installer test harness - final results
+﻿# Installer test harness - final results
 
 **Run on:** 2026-05-04
 **Installer release tag pinned:** `v1.3.21`
@@ -115,7 +115,7 @@ The installer is **green to publish to a public git repo**. The four bugs the ha
 
 Recommended next steps before tagging the release on GitHub:
 
-1. Replace the `DagTechSolution/blockdag-node-and-pool-installer` placeholder URLs in `install.ps1`, `install.sh`, and `installer/README.md` with the real repo URL.
+1. Replace the `Dagtechltd/blockdag-node-and-pool-installer` placeholder URLs in `install.ps1`, `install.sh`, and `installer/README.md` with the real repo URL.
 2. Deploy the `notify-worker` Cloudflare Worker (steps in `notify-worker/README.md`); update the verified Resend domain.
 3. Run `run-tests-fast.ps1` once more after the URL substitution to confirm nothing got mangled.
 4. Cut a tag and announce.

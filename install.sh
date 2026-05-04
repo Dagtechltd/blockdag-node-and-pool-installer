@@ -20,7 +20,7 @@
 #   12. Print a success summary with all reachable endpoints
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/DagTechSolution/blockdag-node-and-pool-installer/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Dagtechltd/blockdag-node-and-pool-installer/main/install.sh | bash
 #   # or:
 #   bash install.sh
 #

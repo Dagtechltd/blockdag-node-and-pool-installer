@@ -1,4 +1,4 @@
-# BlockDAG Pool-Stack Installer
+﻿# BlockDAG Pool-Stack Installer
 
 One-command install of the official BlockDAG `pool-stack-docker` release on Windows, Linux, or macOS. Detects your OS, installs Docker if missing, prompts for the values you need to customize, builds the stack, brings it up, and tells the maintainer it landed.
 
@@ -6,12 +6,12 @@ One-command install of the official BlockDAG `pool-stack-docker` release on Wind
 
 **Linux / macOS:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DagTechSolution/blockdag-node-and-pool-installer/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Dagtechltd/blockdag-node-and-pool-installer/main/install.sh | bash
 ```
 
 **Windows (PowerShell as Administrator for clean Docker install + firewall rule):**
 ```powershell
-iwr -useb https://raw.githubusercontent.com/DagTechSolution/blockdag-node-and-pool-installer/main/install.ps1 -OutFile install.ps1
+iwr -useb https://raw.githubusercontent.com/Dagtechltd/blockdag-node-and-pool-installer/main/install.ps1 -OutFile install.ps1
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
