@@ -1,0 +1,19 @@
+name = "notify-worker"
+main = "notify-worker.js"
+compatibility_date = "2026-04-30"
+
+# Bind to your custom domain after DNS is configured in Cloudflare.
+# Until then, the Worker is reachable at https://notify-worker.<your-account>.workers.dev
+routes = [
+  { pattern = "notify.dagminingtrust.com/install-complete", custom_domain = true }
+]
+
+# KV namespace for per-IP rate-limit counters.
+# Create with:  wrangler kv:namespace create RL
+# Then paste the returned id below.
+[[kv_namespaces]]
+binding = "RL"
+id = "<paste-the-id-from-wrangler-kv-namespace-create>"
+
+# Resend API key set as a Worker secret with:
+#   wrangler secret put RESEND_API_KEY

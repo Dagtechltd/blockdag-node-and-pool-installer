@@ -1,0 +1,26 @@
+# Local install artifacts (these should never end up in this repo;
+# the installer creates them in ~/bdag-pool-stack)
+.env
+node.conf
+docker-compose.override.yml
+latest.bdsnap
+*.bdsnap
+
+# Per-run test output files
+test/results-*.md
+test/results.md
+test/build-*.log
+test/build-*.err
+test/build-*.pid
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+*~
+
+# Temp scratch from running scripts
+/tmp/
+*.bak
