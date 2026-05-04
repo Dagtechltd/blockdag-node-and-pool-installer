@@ -5,11 +5,16 @@
 
 [CmdletBinding()]
 param(
-    [string]$InstallerDir    = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer",
-    [string]$ExistingRelease = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\v1.3.21\pool-stack-docker-pool-v1.3.21",
-    [string]$ResultsPath     = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer\test\results-e2e.md",
+    [string]$InstallerDir    = "",
+    [string]$ExistingRelease = "",
+    [string]$ResultsPath     = "",
     [int]$Cycles = 3
 )
+
+# Resolve defaults relative to this script (empty -> use script-relative path)
+if (-not $InstallerDir) { $InstallerDir = Split-Path $PSScriptRoot -Parent }
+if (-not $ResultsPath)  { $ResultsPath  = Join-Path $PSScriptRoot 'results-e2e.md' }
+if (-not $ExistingRelease) { $ExistingRelease = "$env:USERPROFILE\bdag-pool-stack\pool-stack-docker-pool-v1.3.21" }
 
 $script:Results = New-Object System.Collections.ArrayList
 function Add-Result($Tier, $Name, $Status, $Detail = '') {

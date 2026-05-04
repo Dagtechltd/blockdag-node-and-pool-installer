@@ -3,9 +3,13 @@
 
 [CmdletBinding()]
 param(
-    [string]$InstallerDir = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer",
-    [string]$ResultsPath  = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer\test\results-bash.md"
+    [string]$InstallerDir = "",
+    [string]$ResultsPath  = ""
 )
+
+# Resolve defaults relative to this script (empty -> use script-relative path)
+if (-not $InstallerDir) { $InstallerDir = Split-Path $PSScriptRoot -Parent }
+if (-not $ResultsPath)  { $ResultsPath  = Join-Path $PSScriptRoot 'results-bash.md' }
 
 $script:Results = New-Object System.Collections.ArrayList
 function Add-Result($Tier, $Name, $Status, $Detail = '') {

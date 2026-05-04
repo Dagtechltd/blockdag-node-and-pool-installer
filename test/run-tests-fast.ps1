@@ -1,9 +1,13 @@
 ﻿# Faster harness - tiers 1, 2, 3, 6 only. No Docker, no containers, finishes in seconds.
 [CmdletBinding()]
 param(
-    [string]$InstallerDir = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer",
-    [string]$ResultsPath  = "C:\Users\Dawie\OneDrive\Claude output\BlockDAG-Pool-Node-AMA-Demo\delivery-to-blockdag-devs\installer\test\results-fast.md"
+    [string]$InstallerDir = "",
+    [string]$ResultsPath  = ""
 )
+
+# Resolve defaults relative to this script (empty -> use script-relative path)
+if (-not $InstallerDir) { $InstallerDir = Split-Path $PSScriptRoot -Parent }
+if (-not $ResultsPath)  { $ResultsPath  = Join-Path $PSScriptRoot 'results-fast.md' }
 $ErrorActionPreference = 'Continue'
 $script:Results = New-Object System.Collections.ArrayList
 

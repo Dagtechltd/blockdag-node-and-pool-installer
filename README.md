@@ -131,7 +131,7 @@ Username = any 0x-prefixed wallet (the miner's payout address), password = `x`. 
 | Bug 8 (`.env.example` SNAPSHOT_PATH) | Default `./latest.bdsnap` causes builds to fail when no snapshot is staged | Auto-detect snapshot presence, flip `SNAPSHOT_PATH` to `docker/no-snapshot.marker` if absent |
 | Bug 14 (apt-mirror flakiness) | `archive.ubuntu.com` / `security.ubuntu.com` intermittent failures during build | `network: host` build override + auto-retry with `--no-cache` on first failure |
 
-Full bug catalogue and recommended fixes for the BlockDAG team are in [`PHASE1_ROUND2_VERIFICATION_v1_3_21.md`](../delivery-to-blockdag-devs/PHASE1_ROUND2_VERIFICATION_v1_3_21.md) and [`README_HARD_FIXES_v1_3_21.md`](../delivery-to-blockdag-devs/README_HARD_FIXES_v1_3_21.md).
+Full bug catalogue and recommended fixes for the BlockDAG team are in the project bug-tracker (sent to BlockDAG separately).
 
 ## Reporting a bug
 

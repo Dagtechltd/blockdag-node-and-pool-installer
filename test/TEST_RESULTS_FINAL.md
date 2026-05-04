@@ -94,7 +94,7 @@ For the 60K community release, these gaps are acceptable: the tested paths cover
 ## Files touched
 
 ```
-delivery-to-blockdag-devs/installer/
+
   install.ps1                            (patched: BOM fix, fee validation, postgres-password preserve)
   install.sh                             (patched: fee validation, postgres-password preserve, source-guard)
   templates/env.template                 (no change)
