@@ -2,7 +2,7 @@
   "_comment": "Pinned SHA-256 checksums of release tarballs and bundled binaries. Update on every BlockDAG release. The installer uses these to verify downloads.",
   "_default": "v1.3.23",
   "v1.3.23": {
-    "tarball": null,
+    "tarball": "62b8c4c55fc8d58239f0c54956f6b726d67ca859ad542df7862580e701716673",
     "snapshot": null,
     "snapshot_format_version": 4,
     "snapshot_block_total": 6146673,
@@ -20,8 +20,7 @@
       "Force-set BUILD_CONTEXT=. and DOCKERFILE=dockerfile in .env so compose doesn't fall back to git-dev defaults (Bug 7)",
       "Auto-detect snapshot file presence and flip SNAPSHOT_PATH accordingly (Bug 8)",
       "Set %ProgramData% on Windows to avoid Docker Desktop crashloop on launch from spawned shells (Bug 6)"
-    ],
-    "_status": "tarball SHA pending - dev is uploading; installer will skip verify until SHA published"
+    ]
   },
   "cpu-v1.3.3": {
     "tarball": "32c87bd59328a4b1681607131d976854551bc4e6fec244deb1de81b09d1f676e",
