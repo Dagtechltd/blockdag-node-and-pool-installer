@@ -334,7 +334,7 @@ function Get-UserConfig {
         if ($a -eq 'f') {
             $env:SNAPSHOT_FILE = Read-Host '    Path to local .bdsnap'
         } else {
-            $env:SNAPSHOT_URL = Read-Host '    Snapshot URL'
+            $env:SNAPSHOT_URL = Read-WithDefault '    Snapshot URL' 'https://bdagstack.bdagdev.xyz/latest.bdsnap'
         }
     }
     $cfg.SNAPSHOT_FILE = $env:SNAPSHOT_FILE

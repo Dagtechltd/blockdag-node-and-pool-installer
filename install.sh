@@ -435,7 +435,7 @@ gather_config() {
             read -r -p "    Path to local .bdsnap: " path
             SNAPSHOT_FILE="$path"
         else
-            read -r -p "    Snapshot URL: " path
+            path=$(read_default '    Snapshot URL' 'https://bdagstack.bdagdev.xyz/latest.bdsnap')
             SNAPSHOT_URL="$path"
         fi
     fi
