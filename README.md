@@ -1,4 +1,4 @@
-﻿# BlockDAG Pool-Stack Installer
+# BlockDAG Pool-Stack Installer
 
 One-command install of the official BlockDAG `pool-stack-docker` release on Windows, Linux, or macOS. Detects your OS, installs Docker if missing, prompts for the values you need to customize, builds the stack, brings it up, and tells the maintainer it landed.
 
@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 | Worker / node name           | Friendly name for this node in dashboards and the install notification.                          | hostname                      |
 | Strong RPC creds?            | Replace the demo `test/test` JSON-RPC credentials with strong ones. Necessary if the node will be reachable from outside localhost. | n |
 | Pool fee %                   | What share of mined rewards the pool retains.                                                    | 1.0                           |
-| Use snapshot fast-bootstrap? | Skip genesis sync by importing a 4 GB+ snapshot. Saves ~30–60 minutes on first sync.              | n                             |
+| Use snapshot fast-bootstrap? | Skip genesis sync by importing a 4 GB+ snapshot. Saves ~30–60 minutes on first sync.              | (Snapshot URL: `https://bdagstack.bdagdev.xyz/latest.bdsnap` — verify it's reachable before you set USE_SNAPSHOT=yes; the page sometimes 404s while the team rotates it.) | n                             |
 
 The installer always **auto-generates a strong `POSTGRES_PASSWORD`** so operators don't accidentally publish the placeholder.
 

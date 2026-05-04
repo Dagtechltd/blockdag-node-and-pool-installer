@@ -34,7 +34,7 @@
 [CmdletBinding()]
 param(
     [string]$ReleaseTag      = 'v1.3.21',
-    [string]$ReleaseURLBase  = 'https://github.com/BlockdagEngineering/pool-stack-docker/releases/download',
+    [string]$ReleaseURLBase  = 'https://bdagstack.bdagdev.xyz',
     [string]$NotifyURL       = 'https://notify.dagminingtrust.com/install-complete',
     [string]$InstallDir      = "$env:USERPROFILE\bdag-pool-stack",
     [string]$InnerPrefix     = 'pool-stack-docker-pool-',
@@ -186,7 +186,7 @@ function Get-Release {
     $tarball = "pool-stack-docker-$ReleaseTag.tar.gz"
     $local   = Join-Path $InstallDir $tarball
     if (-not (Test-Path $local)) {
-        $url = "$ReleaseURLBase/$ReleaseTag/$tarball"
+        $url = "$ReleaseURLBase/$tarball"
         Write-Note "Downloading $url"
         Invoke-WebRequest -Uri $url -OutFile $local -UseBasicParsing
     } else { Write-Ok "Tarball already on disk: $local" }

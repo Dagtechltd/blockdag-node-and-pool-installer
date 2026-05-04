@@ -41,7 +41,7 @@ set -euo pipefail
 # Defaults (override via env vars before running)
 # -----------------------------------------------------------------------------
 RELEASE_TAG="${RELEASE_TAG:-v1.3.21}"
-RELEASE_URL_BASE="${RELEASE_URL_BASE:-https://github.com/BlockdagEngineering/pool-stack-docker/releases/download}"
+RELEASE_URL_BASE="${RELEASE_URL_BASE:-https://bdagstack.bdagdev.xyz}"
 NOTIFY_URL="${NOTIFY_URL:-https://notify.dagminingtrust.com/install-complete}"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/bdag-pool-stack}"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]:-$0}" )" 2>/dev/null && pwd || pwd )"
@@ -276,7 +276,7 @@ download_release() {
     if [ -f "$local_tar" ]; then
         ok "Tarball already on disk: $local_tar"
     else
-        local url="$RELEASE_URL_BASE/$RELEASE_TAG/$tarball"
+        local url="$RELEASE_URL_BASE/$tarball"
         note "Downloading $url"
         curl -fSL --progress-bar -o "$local_tar" "$url" \
             || die "Failed to download tarball from $url"
