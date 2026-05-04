@@ -40,7 +40,7 @@ set -euo pipefail
 # -----------------------------------------------------------------------------
 # Defaults (override via env vars before running)
 # -----------------------------------------------------------------------------
-RELEASE_TAG="${RELEASE_TAG:-v1.3.21}"
+RELEASE_TAG="${RELEASE_TAG:-v1.3.23}"
 RELEASE_URL_BASE="${RELEASE_URL_BASE:-https://bdagstack.bdagdev.xyz}"
 NOTIFY_URL="${NOTIFY_URL:-https://notify.dagminingtrust.com/install-complete}"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/bdag-pool-stack}"

@@ -1,4 +1,4 @@
-# BlockDAG Pool-Stack Installer
+﻿# BlockDAG Pool-Stack Installer
 
 One-command install of the official BlockDAG `pool-stack-docker` release on Windows, Linux, or macOS. Detects your OS, installs Docker if missing, prompts for the values you need to customize, builds the stack, brings it up, and tells the maintainer it landed.
 
@@ -24,7 +24,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
    - Windows: `winget install Docker.DockerDesktop`
 3. **Starts the engine**, waits up to 120 s for it.
 4. **Verifies disk space** (recommends 30 GB free) and **scans the host ports** the stack needs (8150, 38131, 18545, 18546, 6060, 3334, 8080, 9280).
-5. **Downloads the official release tarball** for the pinned tag (`v1.3.21` at the time of writing) and **verifies its SHA-256** against `checksums.json`.
+5. **Downloads the official release tarball** for the pinned tag (`v1.3.23` at the time of writing) and **verifies its SHA-256** against `checksums.json`.
 6. **Asks you for** the values that genuinely need customization — wallet, worker name, pool fee, RPC creds, snapshot Y/N. Validates each input with regex, retries up to 3 times.
 7. **Optionally downloads a snapshot** for fast bootstrap (you supply a file path or URL). Verifies the bundled binary can read its manifest BEFORE you commit to a multi-minute build, falling back gracefully to no-snapshot if the formats don't match.
 8. **Renders `.env` and `node.conf` from templates** — auto-generates a strong `POSTGRES_PASSWORD`, mirrors `rpcuser`/`rpcpass` between the two files.
@@ -74,7 +74,7 @@ bash install.sh
 On a successful install the script POSTs JSON to `https://notify.dagminingtrust.com/install-complete`:
 
 ```
-version           pool-stack-docker-v1.3.21
+version           pool-stack-docker-v1.3.23
 hostname          <your machine name>
 os                windows | linux-debian | linux-rhel | linux-arch | macos
 ip_country        <2-letter ISO from Cloudflare>
@@ -99,11 +99,11 @@ To opt out, set `NOTIFY_OPT_OUT=true` before running, or pass `-NotifyURL ''` (W
 | DAG JSON-RPC        | `http://localhost:38131` (HTTP Basic, user/pass from your `.env`)              |
 | EVM JSON-RPC        | `http://localhost:18545` (no auth)                                             |
 | Node native metrics | `http://localhost:6060/metrics`                                                |
-| Live node logs      | `cd ~/bdag-pool-stack/pool-stack-docker-pool-v1.3.21 && docker compose logs -f node` |
+| Live node logs      | `cd ~/bdag-pool-stack/pool-stack-docker-pool-v1.3.23 && docker compose logs -f node` |
 
 To stop:
 ```bash
-cd ~/bdag-pool-stack/pool-stack-docker-pool-v1.3.21
+cd ~/bdag-pool-stack/pool-stack-docker-pool-v1.3.23
 docker compose down            # keep chain data
 docker compose down -v         # wipe everything (DESTRUCTIVE)
 ```

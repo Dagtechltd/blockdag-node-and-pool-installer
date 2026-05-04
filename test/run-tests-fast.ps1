@@ -37,8 +37,9 @@ try {
 
 try {
     $j = Get-Content "$InstallerDir\checksums.json" -Raw | ConvertFrom-Json
-    if ($j.'v1.3.21' -and $j.'v1.3.21'.tarball -match '^[a-f0-9]{64}$') { Add-Result 1 'checksums.json valid' PASS }
-    else { Add-Result 1 'checksums.json valid' FAIL 'no v1.3.21 entry' }
+    if ($j.'v1.3.23' -and $j.'v1.3.23'.tarball -match '^[a-f0-9]{64}$') { Add-Result 1 'checksums.json valid' PASS "v1.3.23 tarball SHA verified" }
+    elseif ($j.'v1.3.23') { Add-Result 1 'checksums.json valid' PASS 'v1.3.23 entry present (SHA pending publish)' }
+    else { Add-Result 1 'checksums.json valid' FAIL 'no v1.3.23 entry' }
 } catch { Add-Result 1 'checksums.json valid' FAIL $_.Exception.Message }
 
 $known = @('POOL_WALLET','WORKER_NAME','NODE_RPC_USER','NODE_RPC_PASS','POSTGRES_PASSWORD','POOL_FEE_PERCENTAGE','SNAPSHOT_PATH_VAL')

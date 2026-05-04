@@ -33,7 +33,7 @@
 # =============================================================================
 [CmdletBinding()]
 param(
-    [string]$ReleaseTag      = 'v1.3.21',
+    [string]$ReleaseTag      = 'v1.3.23',
     [string]$ReleaseURLBase  = 'https://bdagstack.bdagdev.xyz',
     [string]$NotifyURL       = 'https://notify.dagminingtrust.com/install-complete',
     [string]$InstallDir      = "$env:USERPROFILE\bdag-pool-stack",

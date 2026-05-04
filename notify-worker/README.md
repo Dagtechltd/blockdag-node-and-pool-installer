@@ -1,4 +1,4 @@
-# notify-worker — Cloudflare Worker for install telemetry
+﻿# notify-worker — Cloudflare Worker for install telemetry
 
 Receives install-complete payloads from the BlockDAG pool-stack-docker installer (Linux/macOS/Windows), validates them, rate-limits per IP, and forwards a single email to `dawie@dagminingtrust.com` via Resend.
 
@@ -37,7 +37,7 @@ By default the Worker is reachable at `https://notify-worker.<your-account>.work
 curl -X POST https://notify.dagminingtrust.com/install-complete \
   -H 'Content-Type: application/json' \
   -d '{
-    "version":"pool-stack-docker-v1.3.21",
+    "version":"pool-stack-docker-v1.3.23",
     "hostname":"smoke-test",
     "os":"linux-debian",
     "wallet":"0x6387C32ccDD60BfBa00EC70A67715Dcd52E8083f",

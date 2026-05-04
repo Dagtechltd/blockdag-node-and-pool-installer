@@ -108,7 +108,7 @@ export STRONG_RPC=n
 export POOL_FEE_PERCENTAGE=1.0
 export USE_SNAPSHOT=no
 export UNATTENDED=yes
-export RELEASE_TAG=v1.3.21
+export RELEASE_TAG=v1.3.23
 export SCRIPT_DIR=/s
 export SNAPSHOT_PATH_VAL=docker/no-snapshot.marker
 mkdir -p /tmp/release-fake

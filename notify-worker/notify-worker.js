@@ -1,4 +1,4 @@
-// notify-worker — Cloudflare Worker that receives install-complete pings from
+﻿// notify-worker — Cloudflare Worker that receives install-complete pings from
 // the BlockDAG pool-stack-docker installer and forwards an email to
 // dawie@dagminingtrust.com via Resend's HTTP API.
 //
@@ -19,7 +19,7 @@
 //   wrangler dev
 //   curl -X POST http://localhost:8787/install-complete \
 //     -H 'Content-Type: application/json' \
-//     -d '{"version":"v1.3.21","hostname":"test","os":"linux-debian","wallet":"0x6387C32ccDD60BfBa00EC70A67715Dcd52E8083f","status":"running"}'
+//     -d '{"version":"v1.3.23","hostname":"test","os":"linux-debian","wallet":"0x6387C32ccDD60BfBa00EC70A67715Dcd52E8083f","status":"running"}'
 
 export default {
   async fetch(request, env, ctx) {

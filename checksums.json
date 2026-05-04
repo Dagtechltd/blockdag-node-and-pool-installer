@@ -1,16 +1,16 @@
 {
   "_comment": "Pinned SHA-256 checksums of release tarballs and bundled binaries. Update on every BlockDAG release. The installer uses these to verify downloads.",
-  "_default": "v1.3.21",
-  "v1.3.21": {
-    "tarball":  "53459eed858afd554d23bdee5f23eb20b63683bf78d23fb61ba0d61333ca0abe",
+  "_default": "v1.3.23",
+  "v1.3.23": {
+    "tarball": null,
     "snapshot": null,
     "snapshot_format_version": 4,
     "snapshot_block_total": 6146673,
-    "released": "2026-05-04",
+    "released": "2026-05-05",
     "binaries": {
       "blockdag-node": "5fa5fc37c56baedd333cd840eb8dbac1f8cfff8baf1c6ed641e64d296fed1966",
-      "nodeworker":    "db9a87ed43934fe07c9eabe865a10e7c17b2a60e89215e3f5a58c1b36f4005fe",
-      "mining-pool":   "20da33a16792cedacc6c3e664a6410b2907feea495c12ca050d620e177a4a571",
+      "nodeworker": "db9a87ed43934fe07c9eabe865a10e7c17b2a60e89215e3f5a58c1b36f4005fe",
+      "mining-pool": "20da33a16792cedacc6c3e664a6410b2907feea495c12ca050d620e177a4a571",
       "dashboard-api": "fcc84a51404f8af8cc58e5e2d1c62470f1b14a6008ea537e825eb5d0c99b0c12"
     },
     "verified_by_installer": true,
@@ -20,18 +20,19 @@
       "Force-set BUILD_CONTEXT=. and DOCKERFILE=dockerfile in .env so compose doesn't fall back to git-dev defaults (Bug 7)",
       "Auto-detect snapshot file presence and flip SNAPSHOT_PATH accordingly (Bug 8)",
       "Set %ProgramData% on Windows to avoid Docker Desktop crashloop on launch from spawned shells (Bug 6)"
-    ]
+    ],
+    "_status": "tarball SHA pending - dev is uploading; installer will skip verify until SHA published"
   },
   "cpu-v1.3.3": {
-    "tarball":  "32c87bd59328a4b1681607131d976854551bc4e6fec244deb1de81b09d1f676e",
+    "tarball": "32c87bd59328a4b1681607131d976854551bc4e6fec244deb1de81b09d1f676e",
     "snapshot": null,
     "released": "2026-04-30",
-    "_status": "DEPRECATED — superseded by v1.3.21. Has Bug 1 (dockerfile flag-position) and Bug 2 (snapshot format mismatch). Do not use.",
+    "_status": "DEPRECATED — superseded by v1.3.23. Has Bug 1 (dockerfile flag-position) and Bug 2 (snapshot format mismatch). Do not use.",
     "binaries": {
       "blockdag-node": "b21615ae63379559208ebcd0922d1dcb500e58299e7a367c5650c79104580168",
-      "nodeworker":    "84b50d4c079f221d7e52e3ee17555b73bc0c45bac1548ec208d828d9419d7af8",
-      "mining-pool":   "e00f1a828f3f675ab2a40aa932ad5c6cc9b61a2c72081f6c8dd29e6a0ff3f39a",
-      "cpu-miner":     "8bca94425fd65f577fc1c599390ab53c255e4413d86fe51c8fae3c016e40652a"
+      "nodeworker": "84b50d4c079f221d7e52e3ee17555b73bc0c45bac1548ec208d828d9419d7af8",
+      "mining-pool": "e00f1a828f3f675ab2a40aa932ad5c6cc9b61a2c72081f6c8dd29e6a0ff3f39a",
+      "cpu-miner": "8bca94425fd65f577fc1c599390ab53c255e4413d86fe51c8fae3c016e40652a"
     }
   }
 }

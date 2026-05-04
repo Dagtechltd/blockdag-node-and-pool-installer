@@ -1,7 +1,7 @@
 ﻿# Installer test harness - final results
 
 **Run on:** 2026-05-04
-**Installer release tag pinned:** `v1.3.21`
+**Installer release tag pinned:** `v1.3.23`
 
 ## TL;DR
 

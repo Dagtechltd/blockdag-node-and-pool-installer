@@ -14,7 +14,7 @@ param(
 # Resolve defaults relative to this script (empty -> use script-relative path)
 if (-not $InstallerDir) { $InstallerDir = Split-Path $PSScriptRoot -Parent }
 if (-not $ResultsPath)  { $ResultsPath  = Join-Path $PSScriptRoot 'results-e2e.md' }
-if (-not $ExistingRelease) { $ExistingRelease = "$env:USERPROFILE\bdag-pool-stack\pool-stack-docker-pool-v1.3.21" }
+if (-not $ExistingRelease) { $ExistingRelease = "$env:USERPROFILE\bdag-pool-stack\pool-stack-docker-pool-v1.3.23" }
 
 $script:Results = New-Object System.Collections.ArrayList
 function Add-Result($Tier, $Name, $Status, $Detail = '') {
