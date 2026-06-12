@@ -41,7 +41,7 @@ set -euo pipefail
 # Defaults (override via env vars before running)
 # -----------------------------------------------------------------------------
 RELEASE_TAG="${RELEASE_TAG:-v1.3.23}"
-RELEASE_URL_BASE="${RELEASE_URL_BASE:-https://bdagstack.bdagdev.xyz}"
+RELEASE_URL_BASE="${RELEASE_URL_BASE:-https://miners.dagtech.network/downloads}"
 NOTIFY_URL="${NOTIFY_URL:-https://notify.dagminingtrust.com/install-complete}"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/bdag-pool-stack}"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]:-$0}" )" 2>/dev/null && pwd || pwd )"
@@ -435,7 +435,7 @@ gather_config() {
             read -r -p "    Path to local .bdsnap: " path
             SNAPSHOT_FILE="$path"
         else
-            path=$(read_default '    Snapshot URL' 'https://bdagstack.bdagdev.xyz/latest.bdsnap')
+            path=$(read_default '    Snapshot URL' 'https://miners.dagtech.network/downloads/latest.bdsnap')
             SNAPSHOT_URL="$path"
         fi
     fi
